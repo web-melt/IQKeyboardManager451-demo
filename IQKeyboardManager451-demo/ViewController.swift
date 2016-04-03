@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
+
 
 class ViewController: UIViewController {
-
+    
+    var returnKeyHandler: IQKeyboardReturnKeyHandler?
     override func viewDidLoad() {
         super.viewDidLoad()
+        returnKeyHandler = IQKeyboardReturnKeyHandler.init(controller: self)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
